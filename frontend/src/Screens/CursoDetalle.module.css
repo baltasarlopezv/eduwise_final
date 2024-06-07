@@ -1,0 +1,66 @@
+.cursoDetalle {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgb(8, 14, 5), rgb(44, 101, 44));
+    color: #f1f1f1;
+    font-size: 16px;
+    min-height: 100vh; 
+    padding: 150px;
+    box-sizing: border-box; 
+    
+}
+
+.cursoContent {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    border: 2px solid #f1f1f1; 
+    border-radius: 10px; 
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 500px;
+    width: 100%; 
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+.cursoDetalle h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cursoImagen {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.inscripcion {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #f1f1f1;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.inscripcion:hover{
+    background-color: #218838;
+}
+
+.cursoContent p .fa-icon{
+    margin-right: 10px;
+}
+
+.cursoContent p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

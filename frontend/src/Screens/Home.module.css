@@ -1,0 +1,38 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgb(8, 14, 5), rgb(44, 101, 44));
+  padding: 20px 20px 200px;
+  align-items: center;
+}
+
+.Parrafo2 {
+  font-size: 3em;
+  color: #f1f1f1;
+  text-align: center;
+
+}
+
+.Parrafo{
+  color: #f1f1f1;
+  font-size: 1.9em;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.titleContainer {
+  padding-top: 100px;
+}
+
+
+.imageContainer {
+  padding-top: 90px;
+  text-align: center; 
+   
+}
+
+.image {
+  width: 900px;
+
+}
