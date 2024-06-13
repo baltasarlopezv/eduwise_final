@@ -7,7 +7,9 @@ import (
 	"myapp/router"
 	"net/http"
 	"os"
+	"time"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -31,11 +33,23 @@ func main() {
 
 	// Configurar el router
 	r := gin.Default()
+
+	// Configurar CORS
+	config := cors.Config{
+		AllowOrigins:     []string{"http://localhost:3000"},
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
+		AllowHeaders:     []string{"Content-Type", "Authorization"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+		MaxAge:           12 * time.Hour,
+	}
+	r.Use(cors.New(config))
+
+	// Configurar rutas
 	router.SetupUserRouter(r, db)
 	router.SetupCourseRouter(r, db)
 	router.SetupEnrollRouter(r, db)
-	//router.SetupLoginRouter(db, jwtSecret)
-	router.SetupLoginRouter(r, db, jwtSecret) // Actualizado
+	router.SetupLoginRouter(r, db, jwtSecret)
 
 	// Iniciar el servidor
 	err = http.ListenAndServe(fmt.Sprintf(":%d", port), r)
