@@ -32,7 +32,7 @@ const NavBar = () => {
         { id: 1, link: "/", label: "Home" },
         { id: 2, link: "/login", label: "Login" },
         { id: 3, link: "/cursos", label: "Cursos" },
-        { id: 4, link: "/how-we-work", label: "HowWeWork" },
+        { id: 4, link: "/miscursos", label: "MisCursos" },
     ];
 
     const scrollPosition = useScrollPosition();
@@ -75,7 +75,7 @@ const NavBar = () => {
                                 onClick={() => setNavBarOpen(false)}
                                 className={styles.navLink}
                             >
-                                {x.label === "HowWeWork" ? "How we work" : x.label}
+                                {x.label === "MisCursos" ? "Mis Cursos" : x.label}
                             </NavLink>
                             <div className={styles.border}></div>
                         </div>
@@ -92,7 +92,7 @@ const NavBar = () => {
                                     onClick={() => setNavBarOpen(false)}
                                     className={styles.navLink}
                                 >
-                                    {x.label === "HowWeWork" ? "How we work" : x.label}
+                                    {x.label === "MisCursos" ? "Mis Cursos" : x.label}
                                 </NavLink>
                                 <div className={styles.border}></div>
                             </div>
