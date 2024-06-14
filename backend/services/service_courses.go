@@ -30,9 +30,9 @@ func (s *CourseService) CreateCourse(dto dtos.CoursesDTO) (*models.Course, error
 		Name:        dto.Name,
 		Length:      dto.Length,
 		Keywords:    dto.Keywords,
-		Description: dto.Description,
+		Desc:        dto.Desc,
 		Req:         dto.Req,
-		Teachername: dto.Teachername,
+		TeacherName: dto.TeacherName,
 	}
 	if err := s.db.Create(course).Error; err != nil {
 		return nil, err
@@ -64,9 +64,9 @@ func (s *CourseService) UpdateCourse(id uint, dto dtos.CoursesDTO) (*models.Cour
 	course.Name = dto.Name
 	course.Length = dto.Length
 	course.Keywords = dto.Keywords
-	course.Description = dto.Description
+	course.Desc = dto.Desc
 	course.Req = dto.Req
-	course.Teachername = dto.Teachername
+	course.TeacherName = dto.TeacherName
 	if err := s.db.Save(&course).Error; err != nil {
 		return nil, err
 	}

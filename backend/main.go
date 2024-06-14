@@ -48,7 +48,7 @@ func main() {
 	// Configurar rutas
 	router.SetupUserRouter(r, db)
 	router.SetupCourseRouter(r, db)
-	router.SetupEnrollRouter(r, db)
+	router.SetupEnrollRouter(r, db, jwtSecret)
 	router.SetupLoginRouter(r, db, jwtSecret)
 
 	// Iniciar el servidor

@@ -17,12 +17,12 @@ func NewEnrollmentService(db *gorm.DB) *EnrollmentService {
 }
 
 func (s *EnrollmentService) EnrollUserInCourse(userID, courseID uint) error {
-	enrollment := &models.Enrollment{
+	enrollments := &models.Enrollment{
 		UserID:   userID,
 		CourseID: courseID,
 		Date:     time.Now(),
 	}
-	return s.db.Create(enrollment).Error
+	return s.db.Create(enrollments).Error
 }
 
 func (s *EnrollmentService) UnenrollUserFromCourse(userID, courseID uint) error {

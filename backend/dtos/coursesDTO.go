@@ -1,10 +1,10 @@
 package dtos
 
 type CoursesDTO struct {
-	Name        string  `json:"name"`
-	Length      float32 `json:"length"`
-	Keywords    string  `json:"keywords"`
-	Description string  `json:"description"`
-	Req         string  `json:"req"`
-	Teachername string  `json:"teachername"`
+	Name        string `json:"name"`
+	Length      int    `json:"Length"`
+	Keywords    string `json:"keywords"`
+	Desc        string `json:"description"`
+	Req         string `json:"req"`
+	TeacherName string `json:"teachername"`
 }

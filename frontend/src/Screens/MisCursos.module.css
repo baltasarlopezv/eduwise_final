@@ -1,0 +1,46 @@
+.container {
+    padding: 20px;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .coursesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .courseCard {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .courseCard h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .courseCard p {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .unenrollButton {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .unenrollButton:hover {
+    background-color: #ff0000;
+  }
+  
